@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "root",
-    "database": "Artistdb",
+    "database": "artistdb",
     "host": "localhost",
     "dialect": "mysql"
   },
