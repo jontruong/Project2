@@ -1,3 +1,3 @@
-DROP DATABASE IF EXISTS exampledb;
+DROP DATABASE IF EXISTS artistdb;
 CREATE DATABASE artistdb;
 
