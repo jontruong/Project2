@@ -1,12 +1,22 @@
 .list-group-item {
   line-height: 2.5;
 }
+img {
+  width:400px;
+  height:400px;
+}
 
+#start {
+  background: #000000;
+  padding: 15px 35px;
+  display:inline-block;
+  margin-top:15px;
+  color: #ffffff
 
+}
 
 
 /* materialize */
 
- 
   /* materialize ends */
 
