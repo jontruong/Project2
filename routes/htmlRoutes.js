@@ -1,27 +1,29 @@
 var db = require("../models");
 
+var path = require("path");
+
+
+// ===============================================================================
+// ROUTING
+// ===============================================================================
+
 module.exports = function(app) {
-  // Load index page
-  app.get("/", function(req, res) {
-    db.Artist.findAll({}).then(function(dbArtist) {
-      res.render("index", {
-        msg: "Welcome!",
-        examples: dbExamples
-      });
-    });
+  
+
+  app.get("/profile", function(req, res) {
+    res.sendFile(path.join(__dirname, "/../public/profile.html"));
   });
 
-  // Load example page and pass in an example by id
-  app.get("/artists/:id", function(req, res) {
-    db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.render("example", {
-        example: dbExample
-      });
-    });
+  app.get("/appointments", function(req, res) {
+    res.sendFile(path.join(__dirname, "/../public/appointments.html"));
   });
 
-  // Render 404 page for any unmatched routes
-  app.get("*", function(req, res) {
-    res.render("404");
+  app.get("/searchResults", function(req, res) {
+    res.sendFile(path.join(__dirname, "/../public/searchResults.html"));
   });
+
+  // If no matching route is found default to home
+  app.use(function(req,res){
+    res.sendFile(path.join(__dirname, "/../public/home.html"));
+  })
 };
