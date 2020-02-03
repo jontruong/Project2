@@ -33,8 +33,12 @@ module.exports = function(app) {
   });
 
   // Create a new artist
-  app.post("/api/artists", function(req, res) {
+  app.post("/api/new", function(req, res) {
+
+    var routeName = character.name.replace(/\s+/g, "").toLowerCase();
+
     db.Artist.create({
+    routeName: routeName,
     name: req.body.title,
     specialization: req.body.specialization,
     gender: req.body.gender,
@@ -44,6 +48,7 @@ module.exports = function(app) {
     }).then(function(dbArtist) {
       res.json(dbArtist);
     });
+   
   });
 
   // Delete an example by id

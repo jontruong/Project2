@@ -107,26 +107,12 @@
 
   <script type="text/javascript"
     src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="/public/js/register.js" type="text/javascript">
+  </script>
   <script type="text/javascript">
-
-    $(document).ready(function () {
-      $('select').formSelect();
-    });
-
-    $("#regSub").on("click", function(){
-    var firstName= $("#first_name").val().trim();
-    var lastName= $("#last_name").val().trim();
-
-    var location= $("#location").val().trim();
-    var socialMedia= $("#socialMedia").val().trim();
-  
-    
-
-    var name= firstName + " "+ lastName;
-    console.log("name: ", name) 
-
-  })
-
+  $(document).ready(function() {
+    $('select').formSelect();
+});
   </script>
 </body>
 
