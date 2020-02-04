@@ -58,7 +58,7 @@
             </select>
             <label>Specializtion</label>
           </div>
-          <div class="input-field col s6">
+          <div class="input-field col s6" id="gender">
             <select>
               <option value="" disabled selected>Choose your gender</option>
               <option value="1">Male</option>
@@ -68,7 +68,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="input-field col s6">
+          <div class="input-field col s6" id="price">
             <select>
               <option value="" disabled selected>Choose price range(less than)</option>
               <option value="1">50</option>
@@ -119,8 +119,17 @@
 
     var location= $("#location").val().trim();
     var socialMedia= $("#socialMedia").val().trim();
-  
+
+    var specialization=$("#specialization option:selected").text();
+    var gender=$("#gender option:selected").text();
+    var price=$("#price option:selected").text();
+
+    console.log("specialization: ", specialization);
+    console.log("price: ", price)
+    console.log("gender: ", gender)
     
+    console.log("location: ", location);
+    console.log("SM: ", socialMedia);
 
     var name= firstName + " "+ lastName;
     console.log("name: ", name) 
