@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
   <!-- Compiled and minified JavaScript -->
-
+<!-- 
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
     crossorigin="anonymous"></script>
@@ -26,8 +26,13 @@
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script> -->
 
+
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
 </head>
 
 <body class="container">
@@ -133,6 +138,28 @@
 
     var name= firstName + " "+ lastName;
     console.log("name: ", name) 
+    var newArtist = {
+        name,
+        location,
+        socialMedia,
+        gender,
+        price,
+        specialization
+    };
+    console.log("New artist", newArtist)
+
+    $.post("/api/artists", newArtist)
+    // on success, run this callback
+    .then(function(data) {
+      // log the data we found
+      console.log(data);
+      // tell the user we're adding a character with an alert window
+      alert("Adding artist...");
+    });
+    $("#first_name").val("");
+    $("#last_name").val("");
+    $("#location").val("");
+    $("#socialMedia").val("");
 
   })
 

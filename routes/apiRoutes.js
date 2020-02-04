@@ -35,7 +35,7 @@ module.exports = function(app) {
   // Create a new artist
   app.post("/api/artists", function(req, res) {
     db.Artist.create({
-    name: req.body.title,
+    name: req.body.name,
     specialization: req.body.specialization,
     gender: req.body.gender,
     price: req.body.price,
