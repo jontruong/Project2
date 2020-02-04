@@ -1,6 +1,6 @@
 $.get("/api/artists/american", function(data) {
 
-    // For each book that our server sends us back
+    
     for (var i = 0; i < data.length; i++) {
       // Create a parent div to hold book data
       var wellSection = $("<div>");
