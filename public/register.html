@@ -134,6 +134,19 @@
     var name= firstName + " "+ lastName;
     console.log("name: ", name) 
 
+    $.post("/api/artists", newArtist)
+    // on success, run this callback
+    .then(function(data) {
+      // log the data we found
+      console.log(data);
+      // tell the user we're adding a character with an alert window
+      alert("Adding artist...");
+    });
+    $("#first_name").val("");
+    $("#last_name").val("");
+    $("#location").val("");
+    $("#socialMedia").val("");
+
   })
 
   </script>
