@@ -50,6 +50,8 @@ module.exports = function(app) {
   app.post("/api/artists", function(req, res) {
     db.Artist.create({
     name: req.body.name,
+    email: req.body.email,
+    password: req.body.password,
     specialization: req.body.specialization,
     gender: req.body.gender,
     price: req.body.price,
