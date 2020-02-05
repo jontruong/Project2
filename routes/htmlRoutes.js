@@ -30,6 +30,29 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "/../public/american.html"));
   });
 
+  app.get("/japanese", function(req, res) {
+    res.sendFile(path.join(__dirname, "/../public/japanese.html"));
+  });
+
+  app.get("/realism", function(req, res) {
+    res.sendFile(path.join(__dirname, "/../public/realism.html"));
+  });
+
+  app.get("/watercolor", function(req, res) {
+    res.sendFile(path.join(__dirname, "/../public/watercolor.html"));
+  });
+
+  app.get("/black", function(req, res) {
+    res.sendFile(path.join(__dirname, "/../public/black.html"));
+  });
+
+  app.get("/tribal", function(req, res) {
+    res.sendFile(path.join(__dirname, "/../public/tribal.html"));
+  });
+
+  app.get("/portrait", function(req, res) {
+    res.sendFile(path.join(__dirname, "/../public/portrait.html"));
+  });
   // If no matching route is found default to home
   app.use(function(req,res){
     res.sendFile(path.join(__dirname, "/../public/home.html"));
