@@ -8,14 +8,22 @@ module.exports = function(app) {
     });
   });
 
-  app.get("/api/artists/:specializtion", function(req, res) {
-    db.Artist.findAll({where: { spec: req.params.specialization } }).then(function(dbArtist) {
+  app.get("/api/artists/:specialization", function(req, res) {
+    db.Artist.findAll({
+      where: 
+      { 
+        specialization: req.params.specialization 
+      } 
+    }).then(function(dbArtist) {
       res.json(dbArtist);
     });
   });
 
   app.get("/api/artists/:gender", function(req, res) {
-    db.Artist.findAll({where: { spec: req.params.gender } }).then(function(dbArtist) {
+    db.Artist.findAll({
+      where: { 
+        gender: req.params.gender 
+      } }).then(function(dbArtist) {
       res.json(dbArtist);
     });
   });

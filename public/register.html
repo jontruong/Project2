@@ -36,7 +36,6 @@
 </head>
 
 <body class="container">
-  <div class="row">
     <form class="col s12">
       <div class="row">
         <div class="input-field col s6">
@@ -48,18 +47,26 @@
           <label for="last_name">Last Name</label>
         </div>
         <div class="row">
+          <div class="input-field col s6">
+            <input id="email" type="email" class="validate">
+            <label for="email">Email</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="password" type="password" class="validate">
+            <label for="password">Password</label>
+          </div>
+        <div class="row">
           <div class="input-field col s6" id="specialization">
             <select>
               <option value="" disabled selected>Choose your option</option>
-              <option value="1">American Traditional</option>
+              <option value="1">American</option>
               <option value="2">Japanese</option>
               <option value="3">Portait</option>
               <option value="4">Tribal</option>
-              <option value="5">New School</option>
-              <option value="6">Black Work</option>
-              <option value="7">Realism</option>
-              <option value="8">Watercolor</option>
-              <option value="9">Other</option>
+              <option value="5">Black</option>
+              <option value="6">Realism</option>
+              <option value="7">Watercolor</option>
+              <option value="8">Other</option>
             </select>
             <label>Specializtion</label>
           </div>
@@ -76,11 +83,10 @@
           <div class="input-field col s6" id="price">
             <select>
               <option value="" disabled selected>Choose price range(less than)</option>
-              <option value="1">50</option>
-              <option value="2">100</option>
-              <option value="3">200</option>
-              <option value="4">300</option>
-              <option value="5">500</option>
+              <option value="1">100</option>
+              <option value="2">200</option>
+              <option value="3">300</option>
+              <option value="4">500</option>
             </select>
             <label>Price</label>
           </div>
@@ -97,10 +103,10 @@
             <label for="socialMedia">Social Media</label>
           </div>
         </div>
-      </div>
     </form>
   </div>
 
+ 
   <button class="btn waves-effect waves-light" id="regSub" type="submit" name="action">Submit
     <i class="material-icons right"></i>
   </button>
@@ -122,6 +128,9 @@
     var firstName= $("#first_name").val().trim();
     var lastName= $("#last_name").val().trim();
 
+    var email= $("#email").val().trim();
+    var password = $("#password").val().trim();
+
     var location= $("#location").val().trim();
     var socialMedia= $("#socialMedia").val().trim();
 
@@ -140,6 +149,8 @@
     console.log("name: ", name) 
     var newArtist = {
         name,
+        email,
+        password,
         location,
         socialMedia,
         gender,
@@ -160,6 +171,8 @@
     $("#last_name").val("");
     $("#location").val("");
     $("#socialMedia").val("");
+    $("#email").val("");
+    $("#password").val("");
 
   })
 
