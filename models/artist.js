@@ -8,5 +8,18 @@ module.exports = function(sequelize, DataTypes) {
     socialMedia: DataTypes.STRING
   });
   
-  return Artist;
+  Artist.associate = function(models) {
+ 
+    Artist.hasOne(models.Post, {
+      onDelete: "cascade"
+    });
+
+
+  };
+
+return Artist;
+
 };
+
+
+
