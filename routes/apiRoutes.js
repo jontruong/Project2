@@ -40,15 +40,33 @@ module.exports = function(app) {
     });
   });
 
+  app.get("/api/artists/:id", function(req, res) {
+    db.Artist.findOne({where: { spec: req.params.id } }).then(function(dbArtist) {
+      res.json(dbArtist);
+    });
+  });
+
   // Create a new artist
   app.post("/api/artists", function(req, res) {
     db.Artist.create({
     name: req.body.name,
+    email: req.body.email,
+    password: req.body.password,
     specialization: req.body.specialization,
     gender: req.body.gender,
     price: req.body.price,
     location: req.body.location,
     socialMedia: req.body.socialMedia
+    }).then(function(dbArtist) {
+      res.json(dbArtist);
+    });
+  });
+
+  
+  app.post("/api/post", function(req, res) {
+    db.Post.create({
+    body: req.body.body,
+    
     }).then(function(dbArtist) {
       res.json(dbArtist);
     });
