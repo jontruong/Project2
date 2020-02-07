@@ -1,27 +1,55 @@
 
-function saveEdits() {
+// function saveEdits() {
 
-  //get the editable element
-  var editElem = document.getElementById("about-artist");
+//   //get the editable element
+//   var editElem = document.getElementById("about-artist");
   
-  //get the edited element content
-  var userVersion = editElem.innerHTML;
+//   //get the edited element content
+//   var userVersion = editElem.innerHTML;
   
-  //save the content to local storage
-  localStorage.userEdits = userVersion;
+//   //save the content to local storage
+//   localStorage.userEdits = userVersion;
   
-  //write a confirmation to the user
-  document.getElementById("update").innerHTML="Edits saved!";
-  setTimeout(function(){
+//   //write a confirmation to the user
+//   document.getElementById("update").innerHTML="Edits saved!";
+//   setTimeout(function(){
 
-    document.getElementById("update").innerHTML="";
-  }, 2000);
+//     document.getElementById("update").innerHTML="";
+//   }, 2000);
 
 
-  }
+//   }
 
-  // $(document).ready(function() {
 
+  $(document).ready(function() {
+
+    var id=localStorage.getItem("userID");
+
+    var displayName;
+    var diplayGender;
+    var displayLocation;
+    var displaySocial;
+  
+    $.get("/api/artists/id/"+id, function(data) {
+      
+      console.log(data);
+      
+   
+     
+      
+        displayName = data.name;
+        displayGender = data.gender;
+        displayLocation =data.location;
+        displaySocial= data.socialMedia;
+        displaySpecial = data.specialization;
+  
+        $("#artName").html(displayName);
+        $("#gen").html(displayGender);
+        $("#whereRU").html(displayLocation);
+        $("#socialMed").html(displaySocial);
+        $("#typeOfTat").html(displaySpecial);
+      });
+    });
   // var url = window.location.search;
   // var postId;
   // // Sets a flag for whether or not we're updating a post to be false initially
@@ -46,40 +74,13 @@ function saveEdits() {
   
   // });
 
-  var displayName;
-  var diplayGender;
-  var displayLocation;
-  var displaySocial;
-
-  $.get("/api/artists/id/:id", function(data) {
-    
-    db.Artist.findOne({
-      where:
-      {
-        id: req.params.id
-      }
-    
-  }).then(function(dbArtist) {
-    res.json(dbArtist);
-
-      displayName = data.name;
-      displayGender = data.gender;
-      displayLocation =data.location;
-      displaySocial= data.socialMedia;
-      displaySpecial = data.specialization;
 
 
-
-  });
-  console.log("ID: ",id);
-});
+  
+// });
+   
       
-      
-$("#artName").html(displayName);
-$("#gen").html(displayGender);
-$("#whereRU").html(displayLocation);
-$("#socialMed").html(displaySocial);
-$("#typeOfTat").html(displaySpecial);
+
       
   
     
