@@ -19,7 +19,7 @@ module.exports = function(app) {
     });
   });
 
-  app.get("/api/artists/:gender", function(req, res) {
+  app.get("/api/artists/gender/:gender", function(req, res) {
     db.Artist.findAll({
       where: { 
         gender: req.params.gender 
@@ -28,19 +28,19 @@ module.exports = function(app) {
     });
   });
 
-  app.get("/api/artists/:location", function(req, res) {
+  app.get("/api/artists/location/:location", function(req, res) {
     db.Artist.findAll({where: { spec: req.params.location } }).then(function(dbArtist) {
       res.json(dbArtist);
     });
   });
 
-  app.get("/api/artists/:price", function(req, res) {
+  app.get("/api/artists/price/:price", function(req, res) {
     db.Artist.findAll({where: { spec: req.params.price } }).then(function(dbArtist) {
       res.json(dbArtist);
     });
   });
 
-  app.get("/api/artists/:id", function(req, res) {
+  app.get("/api/artists/id/:id", function(req, res) {
     db.Artist.findOne({where: { spec: req.params.id } }).then(function(dbArtist) {
       res.json(dbArtist);
     });
@@ -78,4 +78,21 @@ module.exports = function(app) {
       res.json(dbArtist);
     });
   });
+
+// PUT route for updating posts
+app.put("/api/posts", function(req, res) {
+  db.Post.update(req.body,
+    {
+      where: {
+        id: req.body.id
+      }
+    })
+    .then(function(dbPost) {
+      res.json(dbPost);
+    });
+});
+
 };
+
+ 
+
