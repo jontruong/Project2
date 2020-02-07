@@ -38,7 +38,7 @@
     <div class="container ">
 
         <div class="card-panel grey lighten-1">
-            <h3>Artist Name</h3>
+            <h3 id= "artName">Artist Name</h3>
         </div>
     </div>
     <!-- profile picture and basic info container -->
@@ -56,24 +56,38 @@
                             <a class="carousel-item" href="#five!"><img src="https://lorempixel.com/250/250/nature/5"></a>
                           </div>
 
+            </div>
                   
-                      <!-- <div class="card  grey lighten-1">
-                        <div class="card-image">
-                         
-                    <img class="responsive-img circle center-align"
-                    src="https://images.unsplash.com/photo-1544502062-f82887f03d1c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80">
-              
-                          <span class="card-title">John Smith</span>
+                      <div class="card  grey lighten-1">
+                          <span class="card-title">About</span>
                         </div>
-                        <div class="card-content">
-                          <!-- <p> background information? I am a very simple card. I am good at containing small bits of information.
-                          I am convenient because I require little markup to use effectively.</p> 
+                        <div class=" container card-content blog-container" contenteditable="true">
+                            <div class="row">
+                                <form class="col s12" id="formId">
+                                  <div class="row">
+                                    <div class="input-field col s12" id="about-artist" >
+                                      <textarea id="textarea1" class="materialize-textarea"></textarea>
+                                      <label for="textarea1"></label>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                         <div id="update"></div>
+                                  </div>
+                                  
+                                  <a class="waves-effect waves-light btn save" onclick="saveEdits()">Save</a>
+                                </form>
+                                
+                              </div>
+                          
+                         
                         </div>
                         <div class="card-action ">
                           <a href="#">This is a link</a>
                         </div>
-                      </div> -->
+                      </div>
                 <!-- image div -->
+
+        
                  
                     </div>
            
@@ -100,7 +114,7 @@
     <div class="container ">
 
         <div class="card-panel grey lighten-1">
-            <h3>Gender</h3>
+            <h3 id="gen">Gender</h3>
         </div>
     </div>
 
@@ -124,7 +138,7 @@
     <div class="container ">
 
         <div class="card-panel grey lighten-1">
-            <h3>Location</h3>
+            <h3 id="whereRU">Location</h3>
         </div>
     </div>
 
@@ -141,16 +155,17 @@
         </div>
 
     </div> -->
-    <div class="container ">
+    <!-- <div class="container ">
 
-        <div class="card-panel grey lighten-1">
+        <div class="card-panel grey lighten-1 ">
             <h3>Blog</h3>
         </div>
-    </div>
+    </div> -->
 
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/profile.js"></script>
 
 </body>
 
