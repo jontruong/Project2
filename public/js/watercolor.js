@@ -15,6 +15,7 @@ $.get("/api/artists/specialization/watercolor", function(data) {
       $("#american-well-" + i).append("<h3>Location: " + data[i].location + "</h4>");
       $("#american-well-" + i).append("<h3>Price: " + data[i].price + "</h4>");
       $("#american-well-" + i).append("<h3>Social Media: " + data[i].socialMedia + "</h4>");
+      
     }
     
   });
