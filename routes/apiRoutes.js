@@ -8,7 +8,7 @@ module.exports = function(app) {
     });
   });
 
-  app.get("/api/artists/:specialization", function(req, res) {
+  app.get("/api/artists/specialization/:specialization", function(req, res) {
     db.Artist.findAll({
       where: 
       { 
@@ -29,19 +29,25 @@ module.exports = function(app) {
   });
 
   app.get("/api/artists/location/:location", function(req, res) {
-    db.Artist.findAll({where: { spec: req.params.location } }).then(function(dbArtist) {
+    db.Artist.findAll({where: { 
+      location:req.params.location 
+    } }).then(function(dbArtist) {
       res.json(dbArtist);
     });
   });
 
   app.get("/api/artists/price/:price", function(req, res) {
-    db.Artist.findAll({where: { spec: req.params.price } }).then(function(dbArtist) {
+    db.Artist.findAll({where: {
+      price:req.params.price 
+    } }).then(function(dbArtist) {
       res.json(dbArtist);
     });
   });
 
   app.get("/api/artists/id/:id", function(req, res) {
-    db.Artist.findOne({where: { spec: req.params.id } }).then(function(dbArtist) {
+    db.Artist.findOne({where: { 
+      id: req.params.id 
+    } }).then(function(dbArtist) {
       res.json(dbArtist);
     });
   });

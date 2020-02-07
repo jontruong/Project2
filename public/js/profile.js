@@ -51,7 +51,7 @@ function saveEdits() {
   var displayLocation;
   var displaySocial;
 
-  $.get("/api/artists/:id", function(data) {
+  $.get("/api/artists/id/:id", function(data) {
     
     db.Artist.findOne({
       where:
@@ -71,6 +71,7 @@ function saveEdits() {
 
 
   });
+  console.log("ID: ",id);
 });
       
       
