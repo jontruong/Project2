@@ -9,7 +9,7 @@ $.get("/api/artists/specialization/black", function(data) {
       // Append the well to the well section
       $("#well-section").append(wellSection);
   
-      
+      $("#black-well-" + i).addClass("card");
       $("#black-well-" + i).append("<h2>" + data[i].name + "</h2>");
       $("#black-well-" + i).append("<h3>Gender: " + data[i].gender + "</h4>");
       $("#black-well-" + i).append("<h3>Location: " + data[i].location + "</h4>");

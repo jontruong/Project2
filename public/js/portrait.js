@@ -9,7 +9,7 @@ $.get("/api/artists/specialization/portrait", function(data) {
       // Append the well to the well section
       $("#well-section").append(wellSection);
   
-      
+      $("#portrait-well-" + i).addClass("card");
       $("#portrait-well-" + i).append("<h2>" + data[i].name + "</h2>");
       $("#portrait-well-" + i).append("<h3>Gender: " + data[i].gender + "</h4>");
       $("#portrait-well-" + i).append("<h3>Location: " + data[i].location + "</h4>");
