@@ -35,26 +35,73 @@
 
 <body class="container grey darken-4 ">
 
+  <header>
+   
+
+        <!-- nav -->
+        <div class="card-panel grey lighten-1">
+            <nav class="grey darken-4 white-text">
+                <div class="nav-wrapper">
+
+                    <!-- logo div -->
+                    <div>
+                        <a href="home.html" class="brand-logo grey-text ">Tatt-It </a>
+                        <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+                    </div>
+                    <div class="right">
+                        <!-- Modal Trigger -->
+                        <a class=" dark waves-effect waves-light btn-flat modal-trigger grey-text "
+                            href="#modal1">LogIn/Register</a>
+                    </div>
+                    <!-- Modal Structure -->
+                    <div id="modal1" class="modal grey lighten-1">
+                        <div class="modal-content ">
+                            <h4>Log On</h4>
+                            <p>
+
+                                <input id="email" type="email" class="validate">
+                                <label for="email">Email</label>
+                                <input id="password" type="password" class="validate">
+                                <label for="password">Password</label>
+                                <a href="#!" class="modal-close waves-effect waves-green btn-flat right">Submit</a>
+                            </p>
+
+                        </div>
+                        <div class="modal-footer grey lighten-1 ">
+                            <a href="register.html"
+                                class="modal-close waves-effect waves-green btn-flat left">Register</a>
+                        </div>
+                    </div>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+
+
+
+</header>
 
   <form>
     <div class="row">
       <div class="input-field col s6">
-        <input id="first_name" type="text" class="validate">
+        <input class="teal-text " id="first_name" type="text" class="validate">
         <label for="first_name">First Name</label>
       </div>
       <div class="input-field col s6">
-        <input id="last_name" type="text" class="validate">
+        <input  class="teal-text "  id="last_name" type="text" class="validate">
         <label for="last_name">Last Name</label>
       </div>
 
 
       <div class="row">
         <div class="input-field col s6">
-          <input id="email" type="email" class="validate">
+          <input  class="teal-text "  id="email" type="email" class="validate">
           <label for="email">Email</label>
         </div>
         <div class="input-field col s6">
-          <input id="password" type="password" class="validate">
+          <input  class="teal-text "  id="password" type="password" class="validate">
           <label for="password">Password</label>
         </div>
 
@@ -78,8 +125,8 @@
 
 
           <div class="input-field col s6" id="gender">
-            <select>
-              <option value="" disabled selected>Choose your gender</option>
+            <select >
+              <option  value="" disabled selected>Choose your gender</option>
               <option value="1">Male</option>
               <option value="2">Female</option>
             </select>
@@ -100,13 +147,13 @@
         </div>
         <div class="row">
           <div class="input-field col s6">
-            <input id="location" type="text" class="validate">
+            <input class="teal-text "  id="location" type="text" class="validate">
             <label for="location">Location</label>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s6">
-            <input id="socialMedia" type="text" class="validate">
+            <input class="teal-text "  id="socialMedia" type="text" class="validate">
             <label for="socialMedia">Social Media</label>
           </div>
         </div>
@@ -125,6 +172,8 @@
 
 
   </div>
+
+  <script src="js/materialize.js"></script>
 
 
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
