@@ -223,11 +223,15 @@
       };
       console.log("New artist", newArtist)
 
+      var userID;
       $.post("/api/artists", newArtist)
         // on success, run this callback
         .then(function (data) {
           // log the data we found
           console.log(data);
+          userID=data.id;
+          localStorage.setItem("ID", userID);
+          console.log("USER ID: ", userID);
           // tell the user we're adding a character with an alert window
           alert("Adding artist...");
         });

@@ -20,36 +20,35 @@
 
 //   }
 
+$(document).ready(function() {
 
-  $(document).ready(function() {
+  var id=localStorage.getItem("ID");
 
-    var id=localStorage.getItem("userID");
+  var displayName;
+  var displayGender;
+  var displayLocation;
+  var displaySocial;
 
-    var displayName;
-    var displayGender;
-    var displayLocation;
-    var displaySocial;
-  
-    $.get("/api/artists/id/"+id, function(data) {
-      
-      console.log(data);
-      
+  $.get("/api/artists/id/"+id, function(data) {
+    
+    console.log(data);
+    
+ 
    
-     
-      
-        displayName = data.name;
-        displayGender = data.gender;
-        displayLocation =data.location;
-        displaySocial= data.socialMedia;
-        displaySpecial = data.specialization;
-  
-        $("#artName").html(displayName);
-        $("#gen").html(displayGender);
-        $("#whereRU").html(displayLocation);
-        $("#socialMed").html(displaySocial);
-        $("#typeOfTat").html(displaySpecial);
-      });
+    
+      displayName = data.name;
+      displayGender = data.gender;
+      displayLocation =data.location;
+      displaySocial= data.socialMedia;
+      displaySpecial = data.specialization;
+
+      $("#artName").html(displayName);
+      $("#gen").html(displayGender);
+      $("#whereRU").html(displayLocation);
+      $("#socialMed").html(displaySocial);
+      $("#typeOfTat").html(displaySpecial);
     });
+  });
   // var url = window.location.search;
   // var postId;
   // // Sets a flag for whether or not we're updating a post to be false initially
@@ -72,8 +71,7 @@
   //   return;
   //   })
   
-  // });
-
+  
 
 
   
