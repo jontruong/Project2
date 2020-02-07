@@ -107,7 +107,7 @@
   </div>
 
  
-  <button class="btn waves-effect waves-light" id="regSub" type="submit" name="action">Submit
+  <button class="btn waves-effect waves-light" id="regSub" type="submit" name="action"> Submit
     <i class="material-icons right"></i>
   </button>
 
@@ -166,6 +166,7 @@
     .then(function(data) {
       // log the data we found
       console.log(data);
+      localStorage.setItem("userID", data.id)
       // tell the user we're adding a character with an alert window
       alert("Adding artist...");
     });

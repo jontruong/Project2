@@ -1,4 +1,4 @@
-$.get("/api/artists/black", function(data) {
+$.get("/api/artists/specialization/black", function(data) {
     for (var i = 0; i < data.length; i++) {
       
       var wellSection = $("<div>");
