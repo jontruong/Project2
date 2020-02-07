@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
   <!-- Compiled and minified JavaScript -->
-<!-- 
+  <!-- 
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
     crossorigin="anonymous"></script>
@@ -29,34 +29,38 @@
     crossorigin="anonymous"></script> -->
 
 
-    <script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </head>
 
-<body class="container">
-    <form class="col s12">
+<body class="container grey darken-4 ">
+
+
+  <form >
+    <div class="row">
+      <div class="input-field col s6">
+        <input id="first_name" type="text" class="validate">
+        <label for="first_name">First Name</label>
+      </div>
+      <div class="input-field col s6">
+        <input id="last_name" type="text" class="validate">
+        <label for="last_name">Last Name</label>
+      </div>
+
+
       <div class="row">
         <div class="input-field col s6">
-          <input id="first_name" type="text" class="validate">
-          <label for="first_name">First Name</label>
+          <input id="email" type="email" class="validate">
+          <label for="email">Email</label>
         </div>
         <div class="input-field col s6">
-          <input id="last_name" type="text" class="validate">
-          <label for="last_name">Last Name</label>
+          <input id="password" type="password" class="validate">
+          <label for="password">Password</label>
         </div>
-        <div class="row">
-          <div class="input-field col s6">
-            <input id="email" type="email" class="validate">
-            <label for="email">Email</label>
-          </div>
-          <div class="input-field col s6">
-            <input id="password" type="password" class="validate">
-            <label for="password">Password</label>
-          </div>
-        <div class="row">
-          <div class="input-field col s6" id="specialization">
+
+
+        <div class="row ">
+          <div class="input-field col s6  " id="specialization">
             <select>
               <option value="" disabled selected>Choose your option</option>
               <option value="1">American</option>
@@ -70,6 +74,9 @@
             </select>
             <label>Specializtion</label>
           </div>
+
+
+
           <div class="input-field col s6" id="gender">
             <select>
               <option value="" disabled selected>Choose your gender</option>
@@ -103,10 +110,12 @@
             <label for="socialMedia">Social Media</label>
           </div>
         </div>
-    </form>
+
+
+  </form>
   </div>
 
- 
+
   <button class="btn waves-effect waves-light" id="regSub" type="submit" name="action">Submit
     <i class="material-icons right"></i>
   </button>
@@ -116,38 +125,37 @@
   </div>
 
 
-  <script type="text/javascript"
-    src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+  </script>
   <script type="text/javascript">
-
     $(document).ready(function () {
       $('select').formSelect();
     });
 
-    $("#regSub").on("click", function(){
-    var firstName= $("#first_name").val().trim();
-    var lastName= $("#last_name").val().trim();
+    $("#regSub").on("click", function () {
+      var firstName = $("#first_name").val().trim();
+      var lastName = $("#last_name").val().trim();
 
-    var email= $("#email").val().trim();
-    var password = $("#password").val().trim();
+      var email = $("#email").val().trim();
+      var password = $("#password").val().trim();
 
-    var location= $("#location").val().trim();
-    var socialMedia= $("#socialMedia").val().trim();
+      var location = $("#location").val().trim();
+      var socialMedia = $("#socialMedia").val().trim();
 
-    var specialization=$("#specialization option:selected").text();
-    var gender=$("#gender option:selected").text();
-    var price=$("#price option:selected").text();
+      var specialization = $("#specialization option:selected").text();
+      var gender = $("#gender option:selected").text();
+      var price = $("#price option:selected").text();
 
-    console.log("specialization: ", specialization);
-    console.log("price: ", price)
-    console.log("gender: ", gender)
-    
-    console.log("location: ", location);
-    console.log("SM: ", socialMedia);
+      console.log("specialization: ", specialization);
+      console.log("price: ", price)
+      console.log("gender: ", gender)
 
-    var name= firstName + " "+ lastName;
-    console.log("name: ", name) 
-    var newArtist = {
+      console.log("location: ", location);
+      console.log("SM: ", socialMedia);
+
+      var name = firstName + " " + lastName;
+      console.log("name: ", name)
+      var newArtist = {
         name,
         email,
         password,
@@ -156,26 +164,25 @@
         gender,
         price,
         specialization
-    };
-    console.log("New artist", newArtist)
+      };
+      console.log("New artist", newArtist)
 
-    $.post("/api/artists", newArtist)
-    // on success, run this callback
-    .then(function(data) {
-      // log the data we found
-      console.log(data);
-      // tell the user we're adding a character with an alert window
-      alert("Adding artist...");
-    });
-    $("#first_name").val("");
-    $("#last_name").val("");
-    $("#location").val("");
-    $("#socialMedia").val("");
-    $("#email").val("");
-    $("#password").val("");
+      $.post("/api/artists", newArtist)
+        // on success, run this callback
+        .then(function (data) {
+          // log the data we found
+          console.log(data);
+          // tell the user we're adding a character with an alert window
+          alert("Adding artist...");
+        });
+      $("#first_name").val("");
+      $("#last_name").val("");
+      $("#location").val("");
+      $("#socialMedia").val("");
+      $("#email").val("");
+      $("#password").val("");
 
-  })
-
+    })
   </script>
 </body>
 
