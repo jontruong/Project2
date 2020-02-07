@@ -29,6 +29,8 @@ $(document).ready(function() {
   var displayLocation;
   var displaySocial;
 
+  console.log("yo");
+  
   $.get("/api/artists/id/"+id, function(data) {
     
     console.log(data);
