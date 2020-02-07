@@ -9,9 +9,14 @@
 
  
   /* materialize ends */
+  .top{
+    font-family: 'Miltonian Tattoo', serif;
+    text-shadow: 4px 4px 4px #aaa; 
+    font-size: 48px;
+  }
 
   body {
     font-family: 'Miltonian Tattoo', serif;
     font-size: 48px;
-    text-shadow: 4px 4px 4px #aaa;
+    
   }

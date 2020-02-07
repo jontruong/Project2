@@ -22,6 +22,8 @@
 
 $(document).ready(function() {
 
+  $('.carousel').carousel();
+
   var id=localStorage.getItem("ID");
 
   var displayName;
@@ -30,7 +32,7 @@ $(document).ready(function() {
   var displaySocial;
 
   console.log("yo");
-  
+
   $.get("/api/artists/id/"+id, function(data) {
     
     console.log(data);
@@ -44,11 +46,11 @@ $(document).ready(function() {
       displaySocial= data.socialMedia;
       displaySpecial = data.specialization;
 
-      $("#artName").html(displayName);
-      $("#gen").html(displayGender);
-      $("#whereRU").html(displayLocation);
-      $("#socialMed").html(displaySocial);
-      $("#typeOfTat").html(displaySpecial);
+      $("#artName").html("Artist Name:"+ "<br>" +displayName);
+      // $("#gen").html(displayGender);
+      // $("#whereRU").html(displayLocation);
+      // $("#socialMed").html(displaySocial);
+      $("#typeOfTat").html("Artist's style: "+displaySpecial+"<br>"+ "Gender: "+ displayGender+ "<br>"+ "Located in: "+ displayLocation);
     });
   });
   // var url = window.location.search;

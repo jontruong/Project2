@@ -12,7 +12,7 @@
   <title>Register</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="./styles/styles.css">
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
@@ -46,32 +46,16 @@
                     <!-- logo div -->
                     <div>
                         <a href="home.html" class="brand-logo grey-text ">Tatt-It </a>
-                        <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        
 
                     </div>
                     <div class="right">
                         <!-- Modal Trigger -->
-                        <a class=" dark waves-effect waves-light btn-flat modal-trigger grey-text "
-                            href="#modal1">LogIn/Register</a>
+                        
                     </div>
                     <!-- Modal Structure -->
-                    <div id="modal1" class="modal grey lighten-1">
-                        <div class="modal-content ">
-                            <h4>Log On</h4>
-                            <p>
-
-                                <input id="email" type="email" class="validate">
-                                <label for="email">Email</label>
-                                <input id="password" type="password" class="validate">
-                                <label for="password">Password</label>
-                                <a href="#!" class="modal-close waves-effect waves-green btn-flat right">Submit</a>
-                            </p>
-
-                        </div>
-                        <div class="modal-footer grey lighten-1 ">
-                            <a href="register.html"
-                                class="modal-close waves-effect waves-green btn-flat left">Register</a>
-                        </div>
+                    
+                    <a class="btn waves-effect right med-and-down " href="./profile.html">Profile</a>
                     </div>
                     </ul>
                 </div>
@@ -82,11 +66,11 @@
 
 
 </header>
-
-  <form>
+<div class="card grey lighten-1">
+  <form class="container">
     <div class="row">
       <div class="input-field col s6">
-        <input class="teal-text " id="first_name" type="text" class="validate">
+        <input class="text-black " id="first_name" type="text" class="validate">
         <label for="first_name">First Name</label>
       </div>
       <div class="input-field col s6">
@@ -158,16 +142,17 @@
           </div>
         </div>
 
+        <button class="btn waves-effect waves-light" id="regSub" type="submit" name="action">Submit
+
+          <i class="material-icons right"></i>
+        </button>
 
   </form>
+</div>
   </div>
 
 
 
-  <button class="btn waves-effect waves-light" id="regSub" type="submit" name="action">Submit
-
-    <i class="material-icons right"></i>
-  </button>
 
 
 
@@ -182,7 +167,6 @@
     $(document).ready(function () {
       $('select').formSelect();
     });
-
 
 
     $("#regSub").on("click", function () {

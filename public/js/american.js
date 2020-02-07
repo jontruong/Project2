@@ -1,3 +1,5 @@
+var nameDem;
+
 $.get("/api/artists/specialization/american", function(data) {
     for (var i = 0; i < data.length; i++) {
       
@@ -9,13 +11,29 @@ $.get("/api/artists/specialization/american", function(data) {
       wellSection.attr("id", "american-well-" + i);
       // Append the well to the well section
       $("#well-section").append(wellSection);
-  
+
+
+      nameDem=data[i].name;
       $("#american-well-" + i).addClass("card");
       $("#american-well-" + i).append("<h2>" + data[i].name + "</h2>");
       $("#american-well-" + i).append("<h3>Gender: " + data[i].gender + "</h4>");
       $("#american-well-" + i).append("<h3>Location: " + data[i].location + "</h4>");
       $("#american-well-" + i).append("<h3>Price: " + data[i].price + "</h4>");
       $("#american-well-" + i).append("<h3>Social Media: " + data[i].socialMedia + "</h4>");
+
+      
+      // $("#american-well-" + i).on("click", function(){
+      //     $("#american-well-" + i).attr("href","" );
+      //     console.log("clicked!");
+      //     $("#artName").html(nameDem);
+      //     $("#gen").html(data[i].gender);
+      //     $("#whereRU").html(data[i].location);
+
+      // })
+    
+      // $("#socialMed").html(displaySocial);
+      // $("#typeOfTat").html(displaySpecial);
+      
     }
     
   });
