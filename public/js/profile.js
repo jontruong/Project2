@@ -26,7 +26,7 @@
     var id=localStorage.getItem("userID");
 
     var displayName;
-    var diplayGender;
+    var displayGender;
     var displayLocation;
     var displaySocial;
   
