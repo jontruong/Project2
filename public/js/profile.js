@@ -20,31 +20,7 @@ function saveEdits() {
 
   }
 
-  // $(document).ready(function() {
 
-  // var url = window.location.search;
-  // var postId;
-  // // Sets a flag for whether or not we're updating a post to be false initially
-  // var updating = false;
-  // //  // In localhost:8080/profile?post_id=1, postId is 1
-  // // if (url.indexOf("?artist_id=") !== -1) {
-  // //   postId = url.split("=")[1];
-  // //   getPostData(postId);
-  // // };
-
-  // var bodyInput = $("#about-artist");
-
-  // var formProf = $("#formId");
-
-  // $(formProf).on("submit", function handleFormSubmit(event) {
-  //   event.preventDefault();
-  //   // Wont submit the post if we are missing a body or a title
-  //   // if (!titleInput.val().trim() || !bodyInput.val().trim()) {
-  //   if(!bodyInput.val().trim()) 
-  //   return;
-  //   })
-  
-  // });
 
   var displayName;
   var diplayGender;
