@@ -81,6 +81,7 @@
         <input  class="teal-text "  id="last_name" type="text" class="validate">
         <label for="last_name">Last Name</label>
       </div>
+    </div>
 
 
        
@@ -89,7 +90,7 @@
         <div class="row ">
           <div class="input-field col s6  " id="specialization">
             <select>
-              <option value="" disabled selected>Choose your option</option>
+              <option value="" disabled selected>Specialization</option>
               <option value="1">American</option>
               <option value="2">Japanese</option>
               <option value="3">Portait</option>
@@ -106,11 +107,33 @@
 
           <div class="input-field col s6" id="gender">
             <select >
-              <option  value="" disabled selected>Choose your gender</option>
+              <option  value="" disabled selected>Artist's gender</option>
               <option value="1">Male</option>
               <option value="2">Female</option>
+              <option value="2">Non-Binary</option>
             </select>
             <label>Gender</label>
+          </div>
+        </div>
+      
+        <div class="row">
+          <div class="input-field col s6">
+            <input class="teal-text "  id="location" type="text" class="validate">
+            <label for="location">Location</label>
+          </div>
+          <div class="input-field col s6">
+            <input class="teal-text "  id="pic1" type="text" class="validate">
+            <label for="pic1">Add a Link of the Arist's work</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6">
+            <input class="teal-text "  id="pic2" type="text" class="validate">
+            <label for="pic2">Add a Link of the Arist's work</label>
+          </div>
+          <div class="input-field col s6">
+            <input class="teal-text "  id="pic3" type="text" class="validate">
+            <label for="pic3">Add a Link of the Arist's work</label>
           </div>
         </div>
         <div class="row">
@@ -124,11 +147,9 @@
             </select>
             <label>Price</label>
           </div>
-          <div class="input-field col s6">
-            <input class="teal-text "  id="location" type="text" class="validate">
-            <label for="location">Location</label>
-          </div>
         </div>
+         
+        
         <div class="row">
           <div class="input-field col s12">
             <input class="teal-text "  id="about" type="text" class="validate">
@@ -150,8 +171,11 @@
                   <div class="input-field col s6">
                     <input class="teal-text "  id="socialMedia" type="text" class="validate">
                     <label for="socialMedia">Social Media</label>
-                  </div>
-                </div>
+                 </div>
+                
+              </div>
+
+                
         
 
         <button class="btn waves-effect waves-light" id="regSub" type="submit" name="action">Submit
@@ -189,6 +213,10 @@
       var email = $("#email").val().trim();
       var about = $("#about").val().trim();
 
+      var pic1 = $("#pic1").val().trim();
+      var pic2 = $("#pic2").val().trim();
+      var pic3 = $("#pic3").val().trim();
+
 
       var location = $("#location").val().trim();
       var socialMedia = $("#socialMedia").val().trim();
@@ -211,6 +239,9 @@
         email,
         about,
         location,
+        pic1,
+        pic2,
+        pic3,
         socialMedia,
         gender,
         price,
