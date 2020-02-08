@@ -122,18 +122,18 @@
             <label for="location">Location</label>
           </div>
           <div class="input-field col s6">
-            <input class="teal-text "  id="pic1" type="text" class="validate">
-            <label for="pic1">Add a Link of the Arist's work</label>
+            <input class="teal-text "  id="picOne" type="text" class="validate">
+            <label for="picOne">Add a Link of the Arist's work</label>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s6">
-            <input class="teal-text "  id="pic2" type="text" class="validate">
-            <label for="pic2">Add a Link of the Arist's work</label>
+            <input class="teal-text "  id="picTwo" type="text" class="validate">
+            <label for="picTwo">Add a Link of the Arist's work</label>
           </div>
           <div class="input-field col s6">
-            <input class="teal-text "  id="pic3" type="text" class="validate">
-            <label for="pic3">Add a Link of the Arist's work</label>
+            <input class="teal-text "  id="picThree" type="text" class="validate">
+            <label for="picThree">Add a Link of the Arist's work</label>
           </div>
         </div>
         <div class="row">
@@ -152,8 +152,8 @@
         
         <div class="row">
           <div class="input-field col s12">
-            <input class="teal-text "  id="about" type="text" class="validate">
-            <label for="about">About</label>
+            <input class="teal-text "  id="aboutAr" type="text" class="validate">
+            <label for="aboutAr">About</label>
           </div>
         </div>
 
@@ -204,6 +204,7 @@
       $('select').formSelect();
     });
 
+    var userID;
 
     $("#regSub").on("click", function () {
       event.preventDefault();
@@ -211,11 +212,11 @@
       var lastName = $("#last_name").val().trim();
 
       var email = $("#email").val().trim();
-      var about = $("#about").val().trim();
+      var about = $("#aboutAr").val().trim();
 
-      var pic1 = $("#pic1").val().trim();
-      var pic2 = $("#pic2").val().trim();
-      var pic3 = $("#pic3").val().trim();
+      var pic1 = $("#picOne").val().trim();
+      var pic2 = $("#picTwo").val().trim();
+      var pic3 = $("#picThree").val().trim();
 
 
       var location = $("#location").val().trim();
@@ -250,7 +251,7 @@
       };
       console.log("New artist", newArtist)
       console.log("hello");
-      var userID;
+     
       $.post("/api/artists", newArtist)
         // on success, run this callback
         .then(function (data) {
@@ -268,7 +269,7 @@
       $("#socialMedia").val("");
       $("#email").val("");
       $("#password").val("");
-
+      $(".container").val("");
     })
 
   </script>
