@@ -57,7 +57,7 @@ module.exports = function(app) {
     db.Artist.create({
     name: req.body.name,
     email: req.body.email,
-    password: req.body.password,
+    about: req.body.about,
     specialization: req.body.specialization,
     gender: req.body.gender,
     price: req.body.price,
