@@ -45,6 +45,7 @@ $(document).ready(function() {
       displayLocation =data.location;
       displaySocial= data.socialMedia;
       displaySpecial = data.specialization;
+      displayAbout= data.about;
 
       $("#artName").html("Artist Name:"+ "<br>" +displayName);
       // $("#gen").html(displayGender);
