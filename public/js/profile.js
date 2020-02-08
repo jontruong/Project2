@@ -30,6 +30,10 @@ $(document).ready(function() {
   var displayGender;
   var displayLocation;
   var displaySocial;
+  var displayPic1;
+  var displayPic2;
+  var displayPic3;
+  var displayEmail;
 
   console.log("yo");
 
@@ -46,6 +50,10 @@ $(document).ready(function() {
       displaySocial= data.socialMedia;
       displaySpecial = data.specialization;
       displayAbout= data.about;
+      displayPic1 = data.pic1;
+      displayPic2 = data.pic2;
+      displayPic3 = data.pic3;
+      displayEmail = data.email;
 
       $("#artName").html("Artist Name:"+ "<br>" +displayName);
       // $("#gen").html(displayGender);
