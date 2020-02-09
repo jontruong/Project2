@@ -40,10 +40,7 @@ $(document).ready(function() {
   $.get("/api/artists/id/"+id, function(data) {
     
     console.log(data);
-    
- 
-   
-    
+  
       displayName = data.name;
       displayGender = data.gender;
       displayLocation =data.location;
@@ -56,6 +53,9 @@ $(document).ready(function() {
       displayEmail = data.email;
 
       $("#artName").html("Artist Name:"+ "<br>" +displayName);
+      $("#contact-info").html("Email:"+ displayEmail + "<br>" + "Social Media:" + displaySocial);
+      $("#about").html(displayAbout)
+      
       // $("#gen").html(displayGender);
       // $("#whereRU").html(displayLocation);
       // $("#socialMed").html(displaySocial);
