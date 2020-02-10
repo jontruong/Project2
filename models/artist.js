@@ -8,7 +8,7 @@ module.exports = function(sequelize, DataTypes) {
     pic3: DataTypes.STRING,
     specialization: DataTypes.STRING,
     gender: DataTypes.STRING,
-    price: DataTypes.INTEGER,
+    price: DataTypes.STRING,
     location: DataTypes.STRING,
     socialMedia: DataTypes.STRING
   });

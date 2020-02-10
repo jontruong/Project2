@@ -53,6 +53,26 @@ module.exports = function(app) {
   app.get("/portrait", function(req, res) {
     res.sendFile(path.join(__dirname, "/../public/portrait.html"));
   });
+
+  app.get("/lessthan200", function(req, res) {
+    res.sendFile(path.join(__dirname, "/../public/twoHundredless.html"));
+  });
+
+  app.get("/200+", function(req, res) {
+    res.sendFile(path.join(__dirname, "/../public/200.html"));
+  });
+
+  app.get("/300+", function(req, res) {
+    res.sendFile(path.join(__dirname, "/../public/300.html"));
+  });
+
+  app.get("/400+", function(req, res) {
+    res.sendFile(path.join(__dirname, "/../public/400.html"));
+  });
+
+  app.get("/500+", function(req, res) {
+    res.sendFile(path.join(__dirname, "/../public/500.html"));
+  });
   // If no matching route is found default to home
   app.use(function(req,res){
     res.sendFile(path.join(__dirname, "/../public/home.html"));
