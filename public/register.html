@@ -124,7 +124,6 @@
           <div class="input-field col s6">
             <input class="teal-text "  id="picOne" type="text" class="validate">
             <label for="picOne">Add a Link of the Arist's work</label>
-          </div>
         </div>
         <div class="row">
           <div class="input-field col s6">
@@ -235,7 +234,8 @@
 
       var name = firstName + " " + lastName;
       console.log("name: ", name)
-      var newArtist = {
+      console.log("picture ",pic1)
+      var tatArtist = {
         name,
         email,
         about,
@@ -249,8 +249,22 @@
         specialization
 
       };
-      console.log("New artist", newArtist)
+      console.log("Tat artist", tatArtist)
       console.log("hello");
+      localStorage.setItem("pic1", pic1);
+      localStorage.setItem("pic2", pic2);
+      localStorage.setItem("pic3", pic3);
+      var newArtist = {
+        name,
+        email,
+        about,
+        location,
+        socialMedia,
+        gender,
+        price,
+        specialization
+
+      };
      
       $.post("/api/artists", newArtist)
         // on success, run this callback

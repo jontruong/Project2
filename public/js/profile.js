@@ -59,7 +59,7 @@ $(document).ready(function() {
     
       $("#typeOfTat").html("Artist's style: "+displaySpecial+"<br>"+ "Gender: "+ displayGender+ "<br>"+ "Located in: "+ displayLocation);
     
-      $("about-art").html(displayAbout);
+      $(".about-art").html(displayAbout);
 
       $("#contact-info").html("Email: "+ displayEmail+ "<br>"+ "Social Media: "+ displaySocial);
 
