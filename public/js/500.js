@@ -9,7 +9,7 @@ $.get("/api/artists/price/500+", function(data) {
       // Append the well to the well section
       $("#well-section").append(wellSection);
   
-      $("#price-well-" + i).addClass("card");
+      $("#price-well-" + i).addClass("card grey lighten-1");
       $("#price-well-" + i).append("<h2>" + data[i].name + "</h2>");
       $("#price-well-" + i).append("<h3>Gender: " + data[i].gender + "</h4>");
       $("#price-well-" + i).append("<h3>Location: " + data[i].location + "</h4>");

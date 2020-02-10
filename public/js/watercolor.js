@@ -9,7 +9,7 @@ $.get("/api/artists/specialization/watercolor", function(data) {
       // Append the well to the well section
       $("#well-section").append(wellSection);
   
-      $("#watercolor-well-" + i).addClass("card");
+      $("#watercolor-well-" + i).addClass("card grey lighten-1");
       $("#watercolor-well-" + i).append("<h2>" + data[i].name + "</h2>");
       $("#watercolor-well-" + i).append("<h3>Gender: " + data[i].gender + "</h4>");
       $("#watercolor-well-" + i).append("<h3>Location: " + data[i].location + "</h4>");
