@@ -10,7 +10,7 @@ $.get("/api/artists/specialization/tribal", function(data) {
       $("#well-section").append(wellSection);
   
       $("#tribal-well-" + i).addClass("card grey lighten-1");
-      $("#tribal-well-" + i).append("<h2>" + data[i].name + "</h2>");
+      $("#tribal-well-" + i).append("<h2 class='center-align '>" + data[i].name + "</h2>");
       $("#tribal-well-" + i).append("<h3>Gender: " + data[i].gender + "</h4>");
       $("#tribal-well-" + i).append("<h3>Location: " + data[i].location + "</h4>");
       $("#tribal-well-" + i).append("<h3>Price: " + data[i].price + "</h4>");
