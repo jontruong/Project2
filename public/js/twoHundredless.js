@@ -10,7 +10,7 @@ $.get("/api/artists/price/lessthan200", function(data) {
       $("#well-section").append(wellSection);
   
       $("#realism-well-" + i).addClass("card grey lighten-1");
-      $("#realism-well-" + i).append("<h2 class='center-align '>" + data[i].name + "</h2>");
+      $("#realism-well-" + i).append("<h3 class='center-align '>" + data[i].name + "</h3>");
       $("#realism-well-" + i).append("<h4>Gender: " + data[i].gender + "</h4>");
       $("#realism-well-" + i).append("<h4>Location: " + data[i].location + "</h4>");
       $("#realism-well-" + i).append("<h4>Price: " + data[i].price + "</h4>");
