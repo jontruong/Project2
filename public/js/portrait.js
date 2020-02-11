@@ -10,7 +10,7 @@ $.get("/api/artists/specialization/portrait", function(data) {
       $("#well-section").append(wellSection);
   
       $("#portrait-well-" + i).addClass("card grey lighten-1");
-      $("#portrait-well-" + i).append("<h2 class='center-align '>" + data[i].name + "</h2>");
+      $("#portrait-well-" + i).append("<h3 class='center-align '>" + data[i].name + "</h3>");
       $("#portrait-well-" + i).append("<h4>Gender: " + data[i].gender + "</h4>");
       $("#portrait-well-" + i).append("<h4>Location: " + data[i].location + "</h4>");
       $("#portrait-well-" + i).append("<h4>Price: " + data[i].price + "</h4>");

@@ -15,7 +15,7 @@ $.get("/api/artists/specialization/american", function(data) {
 
       nameDem=data[i].name;
       $("#american-well-" + i).addClass("card grey lighten-1");
-      $("#american-well-" + i).append("<h2 class='center-align '>" + data[i].name + "</h2>");
+      $("#american-well-" + i).append("<h3 class='center-align '>" + data[i].name + "</h3>");
       $("#american-well-" + i).append("<h4>Gender: " + data[i].gender + "</h4>");
       $("#american-well-" + i).append("<h4>Location: " + data[i].location + "</h4>");
       $("#american-well-" + i).append("<h4>Price: " + data[i].price + "</h4>");

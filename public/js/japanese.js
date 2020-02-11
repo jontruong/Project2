@@ -10,7 +10,7 @@ $.get("/api/artists/specialization/japanese", function(data) {
       $("#well-section").append(wellSection);
   
       $("#japanese-well-" + i).addClass("card grey lighten-1");
-      $("#japanese-well-" + i).append("<h2 class='center-align ' >" + data[i].name + "</h2>");
+      $("#japanese-well-" + i).append("<h3 class='center-align ' >" + data[i].name + "</h3>");
       $("#japanese-well-" + i).append("<h4>Gender: " + data[i].gender + "</h4>");
       $("#japanese-well-" + i).append("<h4>Location: " + data[i].location + "</h4>");
       $("#japanese-well-" + i).append("<h4>Price: " + data[i].price + "</h4>");
